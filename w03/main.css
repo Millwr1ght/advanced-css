@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #faebd7;
+  margin: 0; }
+  @media (max-width: 640px) {
+    body div {
+      display: block; } }
+  @media (min-width: 640px) {
+    body div {
+      display: grid;
+      grid-template-columns: 14rem 1fr; } }
+
+h1,
+h2 {
+  font-family: "Lora"; }
+
+ul {
+  list-style: none; }
+
+/* links */
+a {
+  color: #6495ed;
+  text-decoration: none; }
+  a:visited {
+    color: #6495ed;
+    text-decoration: none; }
+  a:active {
+    color: #deb887; }
+  a:hover {
+    text-decoration: underline; }
+
+/* main */
+main {
+  width: 90%;
+  margin: 2em auto 2em auto; }
+  @media (min-width: 640px) {
+    main {
+      grid-column: 2;
+      margin: 0 auto;
+      padding: 1rem; } }
+
+/* header */
+header {
+  background-color: #6495ed;
+  text-align: right; }
+  header h1 a {
+    color: #faebd7; }
+  @media (max-width: 640px) {
+    header {
+      display: block;
+      margin: 0;
+      padding: 1rem 2rem; } }
+  @media (min-width: 640px) {
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      height: 100%;
+      width: 10rem;
+      padding: 2rem; } }
+
+/* nav */
+nav a {
+  color: #faebd7; }
+  nav a:hover {
+    color: white; }
+nav li {
+  padding: 0.5rem; }
+
+/* article cards */
+article {
+  background-color: white;
+  box-shadow: 4px 4px 2px #ccc;
+  margin: 0 auto 2rem auto;
+  text-align: left; }
+  article h2 a {
+    color: black; }
+    article h2 a:visited {
+      color: black; }
+    article h2 a:hover {
+      color: #6495ed; }
+  article .post-date {
+    color: gray;
+    margin: 1rem auto -1rem auto; }
+  article .post-content {
+    margin: 0 auto 0 auto; }
+  article figure {
+    margin: 0 auto 0 auto;
+    text-align: center; }
+    @media (min-width: 640px) {
+      article figure {
+        margin: 3em auto 0 auto; } }
+  article img {
+    width: 50%;
+    margin: 0 auto 0 auto; }
+  @media (max-width: 640px) {
+    article {
+      padding: 2rem; } }
+  @media (min-width: 640px) {
+    article {
+      padding: 3rem;
+      margin: 3rem; } }
+
+/*# sourceMappingURL=main.css.map */

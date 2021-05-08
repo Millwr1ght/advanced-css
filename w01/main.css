@@ -102,8 +102,8 @@ article img {
   margin: 0 auto;
 }
 
-/* smaller screens */
-@media screen and (max-width: 640px) {
+/* smaller (screen)s */
+@media (screen) and (max-width: 640px) {
   body div {
     display: block;
   }
@@ -119,8 +119,8 @@ article img {
   }
 }
 
-/* larger screens */
-@media screen and (min-width: 640px) {
+/* larger (screen)s */
+@media (screen) and (min-width: 640px) {
   body div {
     display: grid;
     grid-template-columns: 14rem 1fr;
