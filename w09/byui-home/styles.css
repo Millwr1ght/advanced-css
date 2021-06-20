@@ -1496,6 +1496,9 @@ main {
   font-size: 15px;
   border-radius: 4px; }
 
+@media (max-width: 48em) {
+  [sm-hidden] {
+    display: none; } }
 @supports (display: grid) {
   .site-banner__right {
     justify-content: flex-end;

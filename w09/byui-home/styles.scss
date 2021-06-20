@@ -135,6 +135,11 @@ main {
 	font-size: 15px;
 	border-radius: 4px;
 }
+@include breakpoint(small) {
+	[sm-hidden] {
+		display: none;
+	}
+}
 
 // flexbox
 @supports (display: grid) {
