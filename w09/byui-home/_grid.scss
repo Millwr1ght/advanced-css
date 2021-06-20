@@ -1,0 +1,47 @@
+//rows, cols
+$num-rows: 6;
+$num-columns: 12;
+$one-column: 100% / $num_columns;
+
+//looping
+$loop-start: 1;
+$col-loop-end: $num-columns + 1;
+$row-loop-end: $num-rows + 1;
+
+//mixins
+@mixin grid($rows) {
+	display: grid;
+	grid-template-columns: repeat($num-columns, $one-column);
+	grid-template-rows: repeat($rows, 1fr);
+}
+
+@mixin grid-row($span-height, $span) {
+	grid-row: $span-height / span $span;
+}
+
+@mixin grid-col($start, $span) {
+	grid-column: $start / span $span;
+}
+
+//loops
+
+// automate grid making
+@for $index from $loop-start to $row-loop-end {
+	.grid-#{$index}-row {
+		@include grid($index);
+	}
+}
+@for $index from $loop-start to $row-loop-end {
+	@for $j from $loop-start to $row-loop-end {
+		.grid-row-#{$index}-span-#{$j} {
+			@include grid-row($index, $j);
+		}
+	}
+}
+@for $index from $loop-start to $col-loop-end {
+	@for $j from $loop-start to $col-loop-end {
+		.grid-col-#{$index}-span-#{$j} {
+			@include grid-col($index, $j);
+		}
+	}
+}

@@ -1,33 +1,259 @@
-@import 'typography';
-@import 'icons';
+@import "typography";
+@import "icons";
+@import "grid";
+@import "flex";
 
 $sm-break: 48em;
+@mixin breakpoint($break) {
+	@if $break==large {
+		@media (min-width: $sm-break) {
+			@content;
+		}
+	} @else if $break==small {
+		@media (max-width: $sm-break) {
+			@content;
+		}
+	}
+}
+
 // colors
 $dark-gray: #727272;
 $med-gray: #b4b3b5;
 $light-gray: #eaeaea;
 $body-font: #020202;
-$link-blue: #0076b6; //why do we have both of these blues?
+$link-blue: #0076b6; //why do we have both of these blues? links are different, scott
 $byui-blue: #056cb6;
+// grids
+$num-columns: 12;
+$one-column: 100% / $num_columns;
+$loop-start: 1;
 
 // Utility classes
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
+
+body {
+	margin: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4 {
+	font-family: "BYUI Open Sans", "Open Sans", "Lucida Sans Unicode",
+		"Lucida Grande", Verdana, sans-serif;
+	font-weight: 400;
+	margin: 0 auto;
+}
+
+p {
+	font-weight: 300;
+}
+
+header {
+	margin-bottom: 40px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+a {
+	color: $body-font;
+	text-decoration: none;
+}
+
+//ul {list-style: none;}
+
 img {
-  max-width: 100%;
+	max-width: 100%;
 }
+
+main {
+	margin: 0 auto;
+	& > * > * {
+		margin: 0 15px 36px;
+	}
+}
+
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.icon-angle-right,
+.icon-triangle-down {
+	float: right;
+}
+
+.white-text {
+	color: $light-gray;
+}
+.med-gray-text {
+	color: $med-gray;
+}
+.dark-gray-text {
+	color: $dark-gray;
+}
+.link-text {
+	color: $link-blue;
+}
+
+.byui-blue-bg {
+	background-color: $byui-blue;
+}
+.light-gray-bg {
+	background-color: $light-gray;
+}
+.med-gray-bg {
+	background-color: $med-gray;
+}
+.dark-gray-bg {
+	background-color: $dark-gray;
+}
+.black-bg {
+	background-color: $body-font;
+}
+
+.btn {
+	display: inline-block;
+	font-weight: 700;
+	text-align: center;
+	border: 1px solid transparent;
+	padding: 6px 24px;
+	font-size: 15px;
+	border-radius: 4px;
+}
+
+// flexbox
+@supports (display: grid) {
+	//specific flex style
+	.site-banner__right {
+		justify-content: flex-end;
+		align-items: center;
+	}
+}
+// other mixins
+
+// site banner
+.site-banner {
+	height: 60px;
+	& [class*="icon-"] {
+		padding: 15px 10px;
+		font-size: 30px;
+	}
+	&__logo {
+		align-self: center;
+	}
+	//&__left {}
+	//&__right {}
+}
+// page header
+.page-header {
+	border-bottom: 1px $dark-gray solid;
+	text-align: center;
+
+	&__title {
+		font-size: 20px;
+		font-weight: 300;
+		//this could be done differently
+		padding-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+
+// important info box
+.important-info-box {
+	text-align: center;
+	padding: 20px;
+	&__headline {
+		font-weight: 200;
+		margin: 0 auto 10px;
+	}
+	// &__button {}
+}
+
+// main banner
+//.main-banner {//&__img {}}
+
+// interest image box
+.interest-box {
+	&__figure {
+		border: 1px solid $med-gray;
+
+		&__img {
+			max-width: 100%;
+			max-height: 100%;
+			width: 100%;
+		}
+		&__caption {
+			padding: 6px 12px;
+		}
+		//&__icon {}
+	}
+}
+
+// links aside
+.links-aside {
+	&__title {
+		font-size: 22px;
+		padding: 10px 20px;
+	}
+	&__list {
+		border-left: $med-gray solid 1px;
+		border-right: $med-gray solid 1px;
+		&__item {
+			padding: 8px 20px;
+			border-bottom: 1px $med-gray solid;
+		}
+	}
+	&__list__item:hover {
+		color: $link-blue;
+		background-color: $light-gray;
+	}
+	// dropdown button
+	&__dropdown {
+		font-weight: bold;
+		padding: 10px 18px;
+		border: $med-gray solid 1px;
+		width: 100%;
+		text-align: left;
+	}
+}
+
+// article/news box
+.news {
+	&-box {
+		border-top: 1px solid $med-gray;
+		padding: 25px;
+
+		//&__img {}
+		&__date {
+			color: black;
+			font-size: 0.75em;
+			font-weight: bold;
+		}
+		//&__title {}
+		//&__abstract {}
+	}
+}
+
+//devotional box
+.devotional-box {
+	border: 1px solid $med-gray;
+	border-radius: 1em;
+	//&__img {}
+	//&__link {}
+	//&__abstract {}
 }

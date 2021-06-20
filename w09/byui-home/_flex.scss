@@ -1,0 +1,28 @@
+@supports (display: grid) {
+	// use flexbox
+
+	//mixins
+	@mixin flex-col($span-num) {
+		flex: 0 0 $one-column * $span-num;
+	}
+
+	@mixin offset($offset-num) {
+		margin-left: $one-column * $offset-num;
+	}
+
+	//loops
+	//make flexy column width and offset classes
+	@for $index from $loop-start to $num-columns + 1 {
+		.flex-col-#{$index} {
+			@include flex-col($index);
+		}
+		.offset-#{$index} {
+			@include offset($index);
+		}
+	}
+
+	.flex {
+		display: flex;
+		flex-flow: row wrap;
+	}
+} //end flex style

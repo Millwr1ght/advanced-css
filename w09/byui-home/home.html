@@ -1,70 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>Brigham Young University - Idaho</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <div class="site-banner white-text">
-        <div class="site-banner__left">
-          <a href="#"
-            ><span aria-hidden="true" class="icon-byui-logo">
-              <span class="sr-only">Link to BYU-Idaho home page</span>
-            </span></a
-          >
-          <h1>Home</h1>
-        </div>
-        <div class="site-banner__right">
-          <a href="http://www.byui.edu/#">
-            <span class="icon-search text-white mobile-header-icon">
-              <span class="sr-only">Search BYU-I</span>
-            </span>
-          </a>
-          <a
-            href="https://secure.byui.edu/cas/login?service=https://web.byui.edu/Services/Login/?RedirectURL=https%3a%2f%2fmy.byui.edu%2f"
-          >
-            <span class="icon-audience text-white mobile-header-icon">
-              <span class="sr-only">Login</span>
-            </span>
-          </a>
-          <a href="http://www.byui.edu/#">
-            <span class="icon-menu text-white mobile-header-icon">
-              <span class="sr-only">Expand Menu</span>
-            </span>
-          </a>
-        </div>
-        <form
-          aria-label="Search byui.edu"
-          method="get"
-          action="https://www.byui.edu/search/result?"
-          role="search"
-        >
-          <div>
-            <label for="searchDesktop" class="sr-only"
-              >Search BYU-I websites:
-            </label>
-            <input
-              id="searchDesktop"
-              name="q"
-              placeholder="Powered by Google"
-              alt="Search BYU-I websites (powered by Google.com)."
-              type="text"
-            />
+        <div class="site-banner white-text byui-blue-bg grid-1-row flex">
+            <div class="site-banner__left grid-row-1-span-1 grid-col-1-span-6 flex-col-6">
+                <a href="#" class="flex">
+                    <span aria-hidden="true" class="site-banner__logo icon-byui-logo white-text black-bg">
+                        <span class="sr-only">Link to BYU-Idaho home page</span>
+                    </span>
+                </a>
+            </div>
+            <div class="site-banner__right grid-row-1-span-1 grid-col-7-span-6 flex flex-col-6">
+                <a href="http://www.byui.edu/#">
+                    <span class="icon-magnifying-glass white-text mobile-header-icon">
+                        <span class="sr-only">Search BYU-I</span>
+                    </span>
+                </a>
+                <a
+                    href="https://secure.byui.edu/cas/login?service=https://web.byui.edu/Services/Login/?RedirectURL=https%3a%2f%2fmy.byui.edu%2f">
+                    <span class="icon-user white-text mobile-header-icon">
+                        <span class="sr-only">Login</span>
+                    </span>
+                </a>
+                <a href="http://www.byui.edu/#">
+                    <span class="icon-menu white-text mobile-header-icon">
+                        <span class="sr-only">Expand Menu</span>
+                    </span>
+                </a>
+            </div>
+            <form hidden aria-label="Search byui.edu" method="get" action="https://www.byui.edu/search/result?"
+                role="search">
+                <div>
+                    <label for="searchDesktop" class="sr-only">Search BYU-I websites:
+                    </label>
+                    <input id="searchDesktop" name="q" placeholder="Powered by Google"
+                        alt="Search BYU-I websites (powered by Google.com)." type="text" />
 
-            <button type="submit">
-              <span aria-hidden="true" class="icon icon-magnifying-glass ">
-                <span class="sr-only">Submit</span>
-              </span>
-            </button>
-          </div>
-        </form>
-      </div>
+                    <button type="submit">
+                        <span aria-hidden="true" class="icon icon-magnifying-glass ">
+                            <span class="sr-only">Submit</span>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="page-header light-gray-bg">
+            <h1 class="page-header__title"><a href="#" class="dark-gray-text">Brigham Young University - Idaho</a></h1>
+        </div>
     </header>
-    <main></main>
+
+    <main>
+        <!-- class="grid-2-row" -->
+        <!-- banners and boxes -->
+        <div class="grid-row-1-span-1 grid-col-1-span-8">
+            <!-- covid info banner -->
+            <div class="important-info-box white-text black-bg">
+                <h2 class="important-info-box__headline">Latest COVID-19 Information</h2>
+                <button class="important-info-box__button btn white-text byui-blue-bg">COVID-19 Updates</button>
+            </div>
+
+            <!-- main banner -->
+            <div class="main-banner">
+                <img class="main-banner__img"
+                    src="https://www.byui.edu/images/home_page/Ready%20Round%207/Teachers-GraphicDesign-desktop.jpg"
+                    alt="click here for cool stuff" aria-hidden="true">
+            </div>
+
+            <!-- interest box x3 -->
+            <div class="interest-box">
+                <!-- link wrapped figure with caption and an > icon -->
+                <a href="#">
+                    <figure class="interest-box__figure">
+                        <img class="interest-box__figure__img"
+                            src="https://www.byui.edu/images/homepage-main/pagebuilder/PhotoGallery%280%29.jpg"
+                            alt="BYU-I building in field" aria-hidden="true">
+                        <figcaption class="interest-box__figure__caption link-text">Photo Gallery
+                            <span class="interest-box__figure__icon icon-angle-right" aria-hidden="true"></span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="interest-box">
+                <a href="#">
+                    <figure class="interest-box__figure">
+                        <img class="interest-box__figure__img img-responsive"
+                            src="https://www.byui.edu/images/homepage-main/pagebuilder/ExploreCampus.jpg"
+                            alt="probably the engineering building, could be the admin building, who knows"
+                            aria-hidden="true">
+                        <figcaption class="interest-box__figure__caption link-text">Campus Videos
+                            <span class="interest-box__figure__icon icon-angle-right" aria-hidden="true"></span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="interest-box">
+                <a href="#">
+                    <figure class="interest-box__figure">
+                        <img class="interest-box__figure__img img-responsive"
+                            src="https://www.byui.edu/images/homepage-main/pagebuilder/PhotoGallery%280%29.jpg"
+                            alt="BYU building in field" aria-hidden="true">
+                        <figcaption class="interest-box__figure__caption link-text">Explore Campus
+                            <span class="interest-box__figure__icon icon-angle-right" aria-hidden="true"></span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+
+        <!-- aside of links x3 -->
+        <div class="grid-row-1-span-1 grid-col-9-span-4">
+            <!-- dropdown list of information links -->
+            <div class="links-aside">
+                <button class="links-aside__dropdown btn">
+                    <!-- TODO: make a toggle -->
+                    GET INFORMATION FOR:<span class="icon-triangle-down" aria-hidden="true"></span>
+                </button>
+                <div class="links-aside__list flex hidden">
+                    <a class="links-aside__list__item flex-col-12" href="#">Future Students</a>
+                    <a class="links-aside__list__item flex-col-12" href="#">Current Students</a>
+                    <a class="links-aside__list__item flex-col-12" href="#">employees</a>
+                    <!--[sic] 'employees' is lowercase in the original document -->
+                    <a class="links-aside__list__item flex-col-12" href="#">Visitors</a>
+                </div>
+            </div>
+
+            <!-- Resoures links list -->
+            <aside class="links-aside">
+                <h3 class="links-aside__title dark-gray-bg white-text">Resources</h3>
+                <div class="links-aside__list flex">
+                    <a href="#" class="links-aside__list__item link-text flex-col-12">Apply Now<span
+                            class="icon-angle-right" aria-hidden="true"></span></a>
+                    <a href="#" class="links-aside__list__item link-text flex-col-12">Financial Aid<span
+                            class="icon-angle-right" aria-hidden="true"></span></a>
+                    <a href="#" class="links-aside__list__item link-text flex-col-12">Degrees and Programs<span
+                            class="icon-angle-right" aria-hidden="true"></span></a>
+                    <a href="#" class="links-aside__list__item link-text flex-col-12">Student Housing<span
+                            class="icon-angle-right" aria-hidden="true"></span></a>
+                    <a href="#" class="links-aside__list__item link-text flex-col-12">Tuition and Fees<span
+                            class="icon-angle-right" aria-hidden="true"></span></a>
+                    <a href="#" class="links-aside__list__item link-text flex-col-12">Academic Deadlines<span
+                            class="icon-angle-right" aria-hidden="true"></span></a>
+                </div>
+            </aside>
+
+            <!-- Important dates links/list -->
+            <aside class="links-aside">
+                <h3 class="links-aside__title byui-blue-bg white-text">Important Dates</h3>
+                <div class="links-aside__list">
+                    <a href="#" class="links-aside__list__item flex">
+                        <div class="flex-col-3">Jun 22</div>
+                        <span class="flex-col-1"> - </span>
+                        <div class="flex-col-8">Devotional - Kristin Ballou</div>
+                    </a>
+                    <a href="#" class="links-aside__list__item flex">
+                        <div class="flex-col-3">Jun 29</div>
+                        <span class="flex-col-1"> - </span>
+                        <div class="flex-col-8">Devotional - Scott Johnson</div>
+                    </a>
+                    <a href="#" class="links-aside__list__item flex">
+                        <div class="flex-col-3">Jul 06</div>
+                        <span class="flex-col-1"> - </span>
+                        <div class="flex-col-8">Devotional - Jennifer Jones</div>
+                    </a>
+                    <a href="#" class="links-aside__list__item flex">
+                        <div class="flex-col-3">Jul 13</div>
+                        <span class="flex-col-1"> - </span>
+                        <div class="flex-col-8">Devotional - Barbara McKenna</div>
+                    </a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- article/news box x3, news button-->
+        <div class="grid-row-2-span-1 grid-col-1-span-8">
+            <div class="news">
+                <!-- news #1 -->
+                <article class="news-box">
+                    <img class="news-box__img" src="https://www.byui.edu/images/newsroom/Fall%20Semester%202021.jpg"
+                        alt="Fall Semester Open" sm-hidden>
+                    <div class="news-box__date">JUNE 8, 2021</div>
+                    <a href="#">
+                        <h4 class="news-box__title link-text">BYU-Idaho to be Fully Open Fall Semester 2021</h4>
+                    </a>
+                    <p class="news-box__abstract">The latest information regarding BYU-Idaho's plans for Fall Semester
+                        2021
+                    </p>
+                </article>
+                <!-- news #2 -->
+                <article class="news-box">
+                    <img class="news-box__img" src="https://www.byui.edu/images/newsroom/Spring%202021%20Enrollmen.jpeg"
+                        alt="This photo is kinda creepy, not gonna lie" sm-hidden>
+                    <div class="news-box__date">MAY 14, 2021</div>
+                    <a href="#">
+                        <h4 class="news-box__title link-text">BYU-Idaho enrollment continues steady, upward
+                            growth</h4>
+                    </a>
+                    <p class="news-box__abstract">Spring 2021 enrollment statistics released</p>
+                </article>
+                <!-- news #3 -->
+                <article class="news-box">
+                    <img class="news-box__img"
+                        src="https://www.byui.edu/images/newsroom/Screen%20Shot%202021-04-20%20at%2010.34.07%20AM.png"
+                        alt="President and Sister Eyring sit for an interview" sm-hidden>
+                    <div class="news-box__date">APRIL 20, 2021</div>
+                    <a href="#">
+                        <h4 class="news-box__title link-text">BYU-Idaho Radio Interview With the Eyrings</h4>
+                    </a>
+                    <p class="news-box__abstract">President and Sister Eyring discuss their Spring 2021 devotional
+                        message
+                        to students.</p>
+                </article>
+                <!-- news button -->
+                <div class="news__button">
+                    <a class="btn byui-blue-bg white-text" href="#">Newsroom</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-row-2-span-1 grid-col-9-span-4">
+            <!-- most recent devotional box -->
+            <div class="devotional-box">
+                <a href="#"><img class="devotional-box__img"
+                        src="https://www.byui.edu/images/1%20-%20Ad%20Manager/Devotional%20Images/2021/2021-06-22_KristinBallou.jpg"
+                        alt="Devotional with Kristin Ballou &quot;In Pursuit of Happiness&quot; on Tuesday, June 22 at 11:30 a.m"></a>
+                <div class="devotional-box__title link-text">Devotional with Kristin Ballou</div>
+                <p class="devotional-box__abstract">"In Pursuit of Happiness" | Tuesday, June 22 at 11:30 a.m.</p>
+                <a href="https://www.byui.edu/live/video?utm_source=byui_site&utm_medium=MD_Event&utm_campaign=DevotionalSP2021&utm_term=Uni_Relations&utm_content=0622_Devotional_KristinBallou"
+                    class="btn btn-blue">View Devotional</a>
+            </div>
+        </div>
+    </main>
+
     <footer></footer>
-  </body>
+</body>
+
 </html>
