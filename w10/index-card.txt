@@ -1,0 +1,51 @@
+Playing with Cards
+Author: Nathan Johnston
+
+List of what you could do to an index card:
+ - fold it
+    - in half
+    - in quarters
+    - in thirds
+    - asymmetrically
+ - throw it
+ - write on it
+ - draw on it
+ - spin it
+ - flip it
+ - rip it
+ - roll it
+    - unroll it
+ - set it on fire
+ - burn it
+ - eat it
+ - tear it
+ - cut it
+ - crease it
+ - spill grease on it
+ - push it
+ - pull it
+ - press it
+ - crumple it
+     - crumple it, then flatten it
+ - pour water on it
+    - pour it on water
+ - poke it
+ - pinch it
+ - color it
+ - kiss it
+ - caress it
+ - stack it
+ - trim it
+ - fold it, then cut it, then unfold it, as with making paper snowflakes
+ - holepunch it
+
+
+::Crumple it::
+You could make a pretty cool "this card is trash" effect/animation by crumpling it and moving off the screen. This would be particularly cool for a note taking application or widget where the user will often discard old notes. 
+
+The note card could have a trash icon that when clicked causes the card to fold in on itself, bringing its corners together sort of recursively/haphazardly over the course of 1-2 seconds. As this is done, the card could get scaled down and rotated a bit as it moved down and off the screen. This could be pleasing to the eye and mind as the trashed note/card is discarded.
+
+::Rip it::
+You could use a ripping effect on a card element to reveal something underneath. Perhaps as the user scrolled down, the upper card tore away in the middle, revealing the elements underneath (e.g: christmas present unwrapping).
+
+This could look just like curtains openning, with two panels pulling away from each other, but with matching jagged edges. Either panel would slide away from the center and up toward the upper corners where they would disappear off the screen until the user scrolled back up.
